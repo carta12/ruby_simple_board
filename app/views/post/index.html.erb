@@ -1,0 +1,19 @@
+<h1>게시글 목록</h1>
+<a href="/post/new">새 글 작성</a>
+
+<table style="text-align:center; width:500px;">
+    <tr>
+        <th>글번호</th>
+        <th>제 목</th>
+    </tr>
+<% @posts.each do |post| %>
+    <tr>
+        <td><%=post.id%></td>
+        <td><a href="/post/show/<%=post.id%>"><%=post.title%></a></td>
+    </tr>
+<% end %>
+    
+    
+    
+    
+</table>
